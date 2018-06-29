@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6C2F004120E6E9A8002C57EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2F004020E6E9A8002C57EB /* AppDelegate.swift */; };
 		6C2F004320E6E9A8002C57EB /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C2F004220E6E9A8002C57EB /* art.scnassets */; };
-		6C2F004520E6E9A8002C57EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2F004420E6E9A8002C57EB /* ViewController.swift */; };
+		6C2F004520E6E9A8002C57EB /* RampPlacerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2F004420E6E9A8002C57EB /* RampPlacerViewController.swift */; };
 		6C2F004820E6E9A8002C57EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C2F004620E6E9A8002C57EB /* Main.storyboard */; };
 		6C2F004A20E6E9AA002C57EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C2F004920E6E9AA002C57EB /* Assets.xcassets */; };
 		6C2F004D20E6E9AA002C57EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C2F004B20E6E9AA002C57EB /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		6C2F003D20E6E9A8002C57EB /* RampRamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RampRamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2F004020E6E9A8002C57EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C2F004220E6E9A8002C57EB /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		6C2F004420E6E9A8002C57EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6C2F004420E6E9A8002C57EB /* RampPlacerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampPlacerViewController.swift; sourceTree = "<group>"; };
 		6C2F004720E6E9A8002C57EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C2F004920E6E9AA002C57EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C2F004C20E6E9AA002C57EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				6C2F004020E6E9A8002C57EB /* AppDelegate.swift */,
 				6C2F004220E6E9A8002C57EB /* art.scnassets */,
-				6C2F004420E6E9A8002C57EB /* ViewController.swift */,
+				6C2F004420E6E9A8002C57EB /* RampPlacerViewController.swift */,
 				6C2F004620E6E9A8002C57EB /* Main.storyboard */,
 				6C2F004920E6E9AA002C57EB /* Assets.xcassets */,
 				6C2F004B20E6E9AA002C57EB /* LaunchScreen.storyboard */,
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C2F004520E6E9A8002C57EB /* ViewController.swift in Sources */,
+				6C2F004520E6E9A8002C57EB /* RampPlacerViewController.swift in Sources */,
 				6C2F004120E6E9A8002C57EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
