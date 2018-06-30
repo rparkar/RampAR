@@ -32,9 +32,35 @@
                                     <action selector="rampButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="TNU-Vg-6oe"/>
                                 </connections>
                             </button>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Lin-h4-Byz">
+                                <rect key="frame" x="10" y="625" width="173" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFT-re-GMu">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <state key="normal" image="removeButton"/>
+                                        <connections>
+                                            <action selector="removeButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="cWx-X2-4Vt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75v-Sw-DT8">
+                                        <rect key="frame" x="47" y="0.0" width="32" height="32"/>
+                                        <state key="normal" image="rotateButton"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDq-Vn-Nyg">
+                                        <rect key="frame" x="94" y="0.0" width="32" height="32"/>
+                                        <state key="normal" image="upArrow"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkL-ab-Ipv">
+                                        <rect key="frame" x="141" y="0.0" width="32" height="32"/>
+                                        <state key="normal" image="downArrow"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Lin-h4-Byz" firstAttribute="leading" secondItem="Jm3-5j-XEF" secondAttribute="leading" constant="10" id="0Qt-np-hN9"/>
+                            <constraint firstItem="Jm3-5j-XEF" firstAttribute="bottom" secondItem="Lin-h4-Byz" secondAttribute="bottom" constant="10" id="AaA-XG-Bd9"/>
                             <constraint firstItem="j5F-kj-k0J" firstAttribute="leading" secondItem="Jm3-5j-XEF" secondAttribute="leading" id="Lq9-rZ-khK"/>
                             <constraint firstItem="j5F-kj-k0J" firstAttribute="top" secondItem="fFl-eS-AZK" secondAttribute="top" id="OqV-CO-PYp"/>
                             <constraint firstItem="j5F-kj-k0J" firstAttribute="bottom" secondItem="Jm3-5j-XEF" secondAttribute="bottom" id="Pw2-11-Viq"/>
@@ -45,7 +71,12 @@
                         <viewLayoutGuide key="safeArea" id="Jm3-5j-XEF"/>
                     </view>
                     <connections>
+                        <outlet property="controlsStack" destination="Lin-h4-Byz" id="xtU-OT-Duo"/>
+                        <outlet property="downButton" destination="OkL-ab-Ipv" id="hpH-wr-Bdf"/>
+                        <outlet property="removeButton" destination="mFT-re-GMu" id="1D5-qN-sQm"/>
+                        <outlet property="rotateButton" destination="75v-Sw-DT8" id="O2o-4b-wH6"/>
                         <outlet property="sceneView" destination="j5F-kj-k0J" id="etD-lg-uMO"/>
+                        <outlet property="upButton" destination="qDq-Vn-Nyg" id="xnI-rk-GJO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -54,6 +85,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="downArrow" width="32" height="32"/>
         <image name="rampIcon" width="107" height="71"/>
+        <image name="removeButton" width="32" height="32"/>
+        <image name="rotateButton" width="32" height="32"/>
+        <image name="upArrow" width="32" height="32"/>
     </resources>
 </document>
