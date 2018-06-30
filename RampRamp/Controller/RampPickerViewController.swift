@@ -14,6 +14,7 @@ class RampPickerViewController: UIViewController {
     //variables
     var sceneView: SCNView!
     var size: CGSize! //popover size
+    weak var rampPlacerVC: RampPlacerViewController!
     
 
     init(size: CGSize) {
@@ -42,6 +43,9 @@ class RampPickerViewController: UIViewController {
         camera.usesOrthographicProjection = true
         scene.rootNode.camera = camera
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        sceneView.addGestureRecognizer(tap)
+        
         let rotateAction = SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: CGFloat(0.01 * Double.pi), z: 0, duration: 0.05))
         
 
@@ -69,6 +73,17 @@ class RampPickerViewController: UIViewController {
         node?.position = SCNVector3Make(-1, -2.2, -1)
         scene.rootNode.addChildNode(node!)
         
+    }
+    
+    @objc func handleTap(_ gestureRecorgniser: UIGestureRecognizer) {
+        let p = gestureRecorgniser.location(in: sceneView)
+        let hitResults = sceneView.hitTest(p, options: [:])
+        
+        if hitResults.count > 0 {
+            let node = hitResults[0].node
+            print(node.name)
+            rampPlacerVC.onRampSelected(node.name!)
+        }
     }
 
 
