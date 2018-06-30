@@ -41,12 +41,28 @@ class RampPickerViewController: UIViewController {
         camera.usesOrthographicProjection = true
         scene.rootNode.camera = camera
 
-        let obj = SCNScene(named: "art.scnassets/pipe.dae")
-        let node = obj?.rootNode.childNode(withName: "pipe", recursively: true)!
+        //adding pipe to popover
+        var obj = SCNScene(named: "art.scnassets/pipe.dae")
+        var node = obj?.rootNode.childNode(withName: "pipe", recursively: true)!
         
         node?.scale = SCNVector3Make(0.0022, 0.0022, 0.0022)
         node?.position = SCNVector3Make(-1, 0.7, -1)
         scene.rootNode.addChildNode(node!)
+        
+        //adding pyramid
+        obj = SCNScene(named: "art.scnassets/pyramid.dae")
+        node = obj?.rootNode.childNode(withName: "pyramid", recursively: true)!
+        node?.scale = SCNVector3Make(0.0059, 0.0059, 0.0059)
+        node?.position = SCNVector3Make(-1, -0.45, -1)
+        scene.rootNode.addChildNode(node!)
+        
+        //adding quarter
+        obj = SCNScene(named: "art.scnassets/quarter.dae")
+        node = obj?.rootNode.childNode(withName: "quarter", recursively: true)!
+        node?.scale = SCNVector3Make(0.0059, 0.0059, 0.0059)
+        node?.position = SCNVector3Make(-1, -2.2, -1)
+        scene.rootNode.addChildNode(node!)
+        
     }
 
 
