@@ -26,6 +26,7 @@
 		6C2F004C20E6E9AA002C57EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C2F004E20E6E9AA002C57EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C2F005520E6F3DC002C57EB /* RampPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampPickerViewController.swift; sourceTree = "<group>"; };
+		6C2F005720E6FD85002C57EB /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 				6C2F004220E6E9A8002C57EB /* art.scnassets */,
 				6C2F004620E6E9A8002C57EB /* Main.storyboard */,
 				6C2F004920E6E9AA002C57EB /* Assets.xcassets */,
+				6C2F005720E6FD85002C57EB /* bg.jpg */,
 				6C2F004B20E6E9AA002C57EB /* LaunchScreen.storyboard */,
 				6C2F004E20E6E9AA002C57EB /* Info.plist */,
 			);
