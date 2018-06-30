@@ -37,14 +37,18 @@ class RampPickerViewController: UIViewController {
         let scene = SCNScene(named: "art.scnassets/ramps.scn")!
         sceneView.scene = scene
         
+        //orthographic camera view
         let camera = SCNCamera()
         camera.usesOrthographicProjection = true
         scene.rootNode.camera = camera
+        
+        let rotateAction = SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: CGFloat(0.01 * Double.pi), z: 0, duration: 0.05))
+        
 
         //adding pipe to popover
         var obj = SCNScene(named: "art.scnassets/pipe.dae")
         var node = obj?.rootNode.childNode(withName: "pipe", recursively: true)!
-        
+        node?.runAction(rotateAction)
         node?.scale = SCNVector3Make(0.0022, 0.0022, 0.0022)
         node?.position = SCNVector3Make(-1, 0.7, -1)
         scene.rootNode.addChildNode(node!)
@@ -52,6 +56,7 @@ class RampPickerViewController: UIViewController {
         //adding pyramid
         obj = SCNScene(named: "art.scnassets/pyramid.dae")
         node = obj?.rootNode.childNode(withName: "pyramid", recursively: true)!
+        node?.runAction(rotateAction)
         node?.scale = SCNVector3Make(0.0059, 0.0059, 0.0059)
         node?.position = SCNVector3Make(-1, -0.45, -1)
         scene.rootNode.addChildNode(node!)
@@ -59,6 +64,7 @@ class RampPickerViewController: UIViewController {
         //adding quarter
         obj = SCNScene(named: "art.scnassets/quarter.dae")
         node = obj?.rootNode.childNode(withName: "quarter", recursively: true)!
+        node?.runAction(rotateAction)
         node?.scale = SCNVector3Make(0.0059, 0.0059, 0.0059)
         node?.position = SCNVector3Make(-1, -2.2, -1)
         scene.rootNode.addChildNode(node!)
